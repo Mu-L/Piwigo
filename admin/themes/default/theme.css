@@ -991,7 +991,7 @@ background: #ffa646;
 }
 
 .pagination-per-page {
-  background-color: #f9f9f9;
+  background-color: #FAFAFA;
   border-radius: 10px;
   display: flex;
   font-size: 12px;
@@ -4903,14 +4903,6 @@ FORM#categoryOrdering p.albumActions .userSeparator {margin:0 5px;}
   margin: 10px 0px;
 }
 
-.cat-move-order-popin input[name=recursiveAutoOrder] {
-  background-color: #d9d9d9;
-}
-
-.cat-move-order-popin input[name=recursiveAutoOrder]:hover {
-  background-color: #ffc17e;
-}
-
 .cat-move-order-popin .close-popin {
   position: absolute;
   right: -40px;
@@ -6102,6 +6094,11 @@ input:checked + .slider:before, input:checked + .slider::after {
   padding-top:20px;
 }
 
+.AddUserSubmit:hover{
+  color: #3F3E40;
+  background-color: #f70;
+}
+
 /********/
 
 p.list_user {
@@ -7133,15 +7130,27 @@ color:#FF7B00;
   border: solid 2px #D4D4D4;
 }
 
-.AddAlbumCancel, .RebameAlbumCancel {
+.AddAlbumCancel, .RenameAlbumCancel {
   color: #3F3E40;
   background-color: #f3f3f3;
 }
+
+.AddAlbumCancel:hover, .RenameAlbumCancel:hover{
+  color: #3F3E40;
+  background-color: #dedede;
+}
+
 .AddAlbumSubmit,
 .RenameAlbumSubmit {
   color: #3F3E40;
   background-color: #FFA836;
 }
+
+.AddAlbumSubmit:hover, .RenameAlbumSubmit:hover{
+  color: #3F3E40;
+  background-color: #f70;
+}
+
 .DeleteAlbumSubmit {
   background-color: #e74c3c;
   color: #fff;
