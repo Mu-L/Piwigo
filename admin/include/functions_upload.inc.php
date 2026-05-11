@@ -8,6 +8,7 @@
 
 include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/image.class.php');
+include_once(PHPWG_ROOT_PATH.'include/svg-sanitizer.php');
 
 // add default event handler for image and thumbnail resize
 add_event_handler('upload_image_resize', 'pwg_image_resize');
@@ -252,6 +253,24 @@ SELECT
     }
 
     pwg_check_real_extension($source_filepath, $original_filename, true);
+
+    if ('svg' == $original_extension)
+    {
+      // Check for malicious code inside the svg
+      $issues = validate_svg(file_get_contents($source_filepath));
+      if ($issues != '')
+      {
+        $error_msg = 'Invalid SVG "'.htmlspecialchars($original_filename).'" '.$issues;
+        unlink($source_filepath);
+        if (defined('IN_WS'))
+        {
+          global $service;
+          $service->sendResponse(new PwgError(415, $error_msg));
+          exit;
+        }
+        die($error_msg);
+      }
+    }
 
     $file_extension_replace_by = array(
       'jpeg' => 'jpg',
