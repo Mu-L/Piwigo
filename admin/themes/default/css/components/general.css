@@ -335,7 +335,6 @@ Info
   margin:0 5px;
   padding: 2px 7px;
   cursor:pointer;
-  margin-right:-2px;
 }
 
 .info.hide {
@@ -416,13 +415,20 @@ Info
 
 .eiw-icon,
 #photosAddContent .infos ul li a i,
-.eiw ul li a i,
 .AddAlbumErrors::before,
 .groupError::before,
 .ValidationUserDissociated i,
 .ValidationUserAssociated i{
   margin-right:10px;
   font-size: 16px;
+}
+
+.eiw ul li a i{
+  margin-right:0;
+}
+
+.eiw ul li a.no-margin{
+  margin:0;
 }
 
 .AddAlbumErrors::before,

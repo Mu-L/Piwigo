@@ -87,7 +87,7 @@ jQuery(document).ready(function() {
         if (data.stat == "ok") {
           save_button_set_loading(false)
 
-          $('.info-message').show()
+          $('.info-message').css('display', 'flex');
           $('.cat-modification .cat-modify-info-subcontent').html(str_just_now)
           $('.cat-modification .cat-modify-info-content').html(str_just_now)
 
@@ -364,7 +364,7 @@ jQuery(document).ready(function() {
 
           temp_txt = $(".info-message").text();
           $(".info-message").text(str_album_comment_allow);
-          $(".info-message").show();
+          $(".info-message").css('display', 'flex');
 
           setTimeout(
             function() {
@@ -412,7 +412,7 @@ jQuery(document).ready(function() {
 
           temp_txt = $(".info-message").text();
           $(".info-message").text(str_album_comment_disallow);
-          $(".info-message").show();
+          $(".info-message").css('display', 'flex');
 
           setTimeout(
             function() {

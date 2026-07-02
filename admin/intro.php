@@ -66,7 +66,7 @@ if ($nb_orphans > 0)
 {
   $orphans_url = PHPWG_ROOT_PATH.'admin.php?page=batch_manager&amp;filter=prefilter-no_album';
 
-  $message = '<a href="'.$orphans_url.'"><i class="icon-heart-broken"></i>';
+  $message = '<a href="'.$orphans_url.'" class="no-margin"><i class="icon-heart-broken"></i>';
   $message.= l10n('Orphans').'</a>';
   $message.= '<span class="adminMenubarCounter">'.$nb_orphans.'</span>';
 
@@ -84,7 +84,7 @@ if ($locked_album > 0)
 {
   $locked_album_url = PHPWG_ROOT_PATH.'admin.php?page=cat_options&section=visible';
 
-  $message = '<a href="'.$locked_album_url.'"><i class="icon-cone"></i>';
+  $message = '<a href="'.$locked_album_url.'" class="no-margin"><i class="icon-cone"></i>';
   $message.= l10n('Locked album').'</a>';
   $message.= '<span class="adminMenubarCounter">'.$locked_album.'</span>';
 
