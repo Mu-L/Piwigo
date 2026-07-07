@@ -1437,5 +1437,6 @@ $lang['Change logo'] = 'Change logo';
 $lang['Latest update'] = 'Latest update';
 $lang['See available updates'] = 'See available updates';
 $lang['You are about to delete %s groups, are you sure?'] = 'You are about to delete %s groups, are you sure?';
+$lang['Users not logged in will have these permissions applied. Grant access to private albums only with great caution.'] = 'Users not logged in will have these permissions applied. Grant access to private albums only with great caution.';
 
 // Leave this line empty
