@@ -3,6 +3,8 @@
 The Piwigo team and community take security bugs seriously. We appreciate your efforts
 to responsibly disclose your findings.
 
+⚠️ We have no bug bounty program. Please don't ask for money to report security issues.
+
 ## Supported Versions
 
 Security updates will typically only be applied to the latest release. Exceptionally,
